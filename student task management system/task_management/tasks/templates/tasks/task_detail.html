@@ -1,0 +1,10 @@
+<!-- tasks/templates/tasks/task_detail.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>{{ task.title }}</h1>
+  <p>{{ task.description }}</p>
+  <p>Deadline: {{ task.deadline }}</p>
+  <a href="{% url 'task_edit' pk=task.pk %}">Edit</a>
+  <a href="{% url 'task_list' %}">Back to task list</a>
+{% endblock %}
